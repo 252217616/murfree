@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+  <context id="Mysql" targetRuntime="tk.mybatis.mapper.generator.TkMyBatis3SimpleImpl"
+    defaultModelType="flat">
+    <property name="beginningDelimiter" value="`"/>
+    <property name="endingDelimiter" value="`"/>
+
+    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+      <property name="mappers" value="com.qianbao.print.common.mapper.BaseMapper"/>
+      <property name="caseSensitive" value="true"/>
+    </plugin>
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+      connectionURL="jdbc:mysql://172.28.38.77:3306/printdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+      userId="printdb"
+      password="printdb">
+    </jdbcConnection>
+
+    <javaModelGenerator targetPackage="com.qianbao.print.domain"
+      targetProject="src/main/java">
+      <property name="enableSubPackages" value="true"/>
+      <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mapper"
+      targetProject="src/main/resources/mybatis/">
+      <property name="enableSubPackages" value="false"/>
+    </sqlMapGenerator>
+
+    <javaClientGenerator
+            targetPackage="com.qianbao.print.mapper"
+            targetProject="src/main/java"
+            type="XMLMAPPER">
+      <property name="enableSubPackages" value="true"/>
+    </javaClientGenerator>
+
+    <!--<table tableName="BANK_INFO%" mapperName="{0}Mapper">-->
+      <!--<generatedKey column="VIF_VOUCHERNO" sqlStatement="Mysql" identity="true"/>-->
+    <!--</table>-->
+    <table tableName="PARAMETER_INFO" domainObjectName="Parameter"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <columnRenamingRule searchString="^PMI" replaceString="" />
+    </table>
+  </context>
+</generatorConfiguration>

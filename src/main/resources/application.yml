@@ -1,0 +1,50 @@
+server:
+  port: 8320
+
+spring:
+  datasource:
+    url: jdbc:mysql://172.28.38.77:3306/printdb?useUnicode=true&characterEncoding=UTF-8
+    username: printdb
+    password: printdb
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  jackson:
+      locale: zh_CN
+      time-zone: GMT+8
+      deserialization:
+        READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE: true
+      serialization:
+        INDENT_OUTPUT: true
+      date-format: yyyy-MM-dd HH:mm:ss
+
+
+mapper:
+  mappers:
+   - com.qianbao.print.common.mapper.BaseMapper
+  enumAsSimpleType: true
+  not-empty: true
+  before: true
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.qianbao.print.domain
+  configuration:
+      log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+
