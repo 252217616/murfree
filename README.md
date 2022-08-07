@@ -54,7 +54,7 @@
 
 规划的树如下：
 
-![](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/preview/boxcnhGF1tSMSgd2faqkV3k829f?mount_point=explorer&preview_type=16&version=7129012542168432642)
+![test](https://user-images.githubusercontent.com/31950679/183277988-cd4693e4-a4ba-4be8-9baf-2cbba50ce973.gif)
 
 例如：我们现在要做一个游戏内的NPC的AI模型，我们希望该NPC在蓝足够的时候就一直释放技能，直到Mp不足，该NPC会受伤，当他的HP不足时要立刻停止释放技能，进行回血，当MP不足并且HP充足的时候，就进行巡逻。
 
@@ -62,7 +62,7 @@
 
 规划的树如下：
 
-![](./image/npc.gif)
+![npc](https://user-images.githubusercontent.com/31950679/183277985-554b9b5a-3555-42e4-975b-9acba3a5e1d5.gif)
 
 ----
 
