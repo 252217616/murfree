@@ -1,0 +1,47 @@
+
+body,html,#listGroupManage,.fadeInRight{
+  height:100%;
+  width:100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+}
+
+#chart-container {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+  height: 420px;
+  width: calc(100% - 24px);
+  border: 2px dashed #aaa;
+  border-radius: 5px;
+  overflow: auto;
+  text-align: center;
+}
+
+#chart-container {
+  background-color: #eee;
+  height: calc(100% - 24px);
+} 
+
+.orgchart {
+  background: #eee;
+}
+
+.edge {
+  display: none;
+}
+
+.orgchart .node {
+  width: 150px;
+}
+
+#contextDiv {
+  display: none;
+  position:absolute;
+}

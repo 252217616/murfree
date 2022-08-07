@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <title>树图 - 页面</title>
+    <!-- CSS文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="./dist/css/jquery.orgchart.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="./dist/js/jquery.orgchart.js"></script>
+</head>
+<body>
+<div id="listGroupManage">
+    <div class="animated fadeInRight">
+        <div>
+            <input id="log" type="button" value="生成json">
+            <input id="loadJson" type="button" value="载入json">
+        </div>
+        <div id="chart-container" class="view-state"></div>
+    </div>
+</div>
+
+
+<!--正常情况下隐藏-->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">修改</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="itemid">节点Id</label>
+                        <input type="text" readonly="readonly" class="form-control" id="itemid" placeholder="节点id">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemname">节点名称</label>
+                        <input type="text" class="form-control" id="itemname" placeholder="节点名称">
+                    </div>
+                    <div class="form-group" >
+                        <label for="itemcontent">实现类全路径</label>
+                        <input type="text" class="form-control" id="itemcontent" placeholder="实现类全路径">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="savechange">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contextDiv" class="list-group">
+    <a href="#" id="add-node" class="list-group-item">增加节点</a>
+    <a href="#" id="delete-node" class="list-group-item">删除节点</a>
+    <a href="#" id="change-props" class="list-group-item">修改节点属性</a>
+</div>
+<script type="text/javascript" src="./js/new.js"></script>
+</body>
+</html>
